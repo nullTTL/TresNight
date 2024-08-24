@@ -35,8 +35,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,6 +64,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Auth\Log.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,6 +76,54 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Auth\Log.xaml.cs">
+      <DependentUpon>Log.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Bar.cs">
+      <DependentUpon>Bsm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Bsm.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bsm.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Bsm.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bsm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Bsm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bsm.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Base\ControlBsm.cs" />
+    <Compile Include="Base\Kitchen.cs">
+      <DependentUpon>Bsm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Post.cs">
+      <DependentUpon>Bsm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Product.cs">
+      <DependentUpon>Bsm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Product_Bar.cs">
+      <DependentUpon>Bsm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Bsm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\sp_helpdiagrams_Result.cs">
+      <DependentUpon>Bsm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\sysdiagrams.cs">
+      <DependentUpon>Bsm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\Transition.cs" />
+    <Compile Include="Base\User.cs">
+      <DependentUpon>Bsm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Base\USH.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -86,6 +147,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="Base\Bsm.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Bsm.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Base\Bsm.edmx.diagram">
+      <DependentUpon>Bsm.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,6 +162,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\" />
+    <Folder Include="Kitchen\" />
+    <Folder Include="Menager\" />
+    <Folder Include="Resource\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Base\Bsm.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Bsm.Context.cs</LastGenOutput>
+      <DependentUpon>Bsm.edmx</DependentUpon>
+    </Content>
+    <Content Include="Base\Bsm.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Bsm.edmx</DependentUpon>
+      <LastGenOutput>Bsm.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

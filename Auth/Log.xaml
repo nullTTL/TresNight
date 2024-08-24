@@ -1,0 +1,36 @@
+﻿<Page x:Class="TresNight.Auth.Log"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TresNight.Auth"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Log">
+
+    <Grid>
+           <Grid>
+       <Grid.ColumnDefinitions>
+           <ColumnDefinition Width="150"/>
+           <ColumnDefinition Width="*"/>
+           <ColumnDefinition Width="150"/>
+       </Grid.ColumnDefinitions>
+       
+           <Grid.RowDefinitions>
+               <RowDefinition Height="80"/>
+               <RowDefinition Height="300"/>
+           <RowDefinition Height="100"/>
+       </Grid.RowDefinitions>
+       <Button Grid.Column="1" Grid.Row="1" Width="150" Height="30" VerticalAlignment="Bottom" Margin="60"  FontSize="15" Name="Entry"  Content="Войти" Click="Entry_Click"  />
+       <TextBlock Grid.Column="1" Grid.Row="1" Width="60" Height="20" FontSize="15" HorizontalAlignment="Left"
+                  Margin=" 100 10 0 100" Text="Логин:" />
+       <TextBlock Grid.Column="1" Grid.Row="1" Width="60" Height="30" FontSize="15" HorizontalAlignment="Left" Margin=" 100 10 0 0"
+                  Text="Пороль:" />
+       <TextBlock Grid.Column="1" Grid.Row="1" Width="210" Height="40" FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="27" Margin=" 0 10 0 0 "
+                  Text="Авторизация" />
+       <TextBox Grid.Column="1" Grid.Row="1" Width="150" Height="25" Name="lg" FontSize="16" Margin="0 0 0 90" />
+       <PasswordBox Grid.Column="1" Grid.Row="1" Width="150" Height="25" FontSize="16" Name="pas"  />
+
+   </Grid>
+    </Grid>
+</Page>

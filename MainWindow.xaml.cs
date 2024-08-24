@@ -12,17 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TresNight.Base;
+using TresNight.Auth;
 
 namespace TresNight
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+            ControlBsm.ent0bj = new FrsNightEntities();
+            Transition.frm0bj = StartPage;
+            StartPage.Navigate(new Log());
         }
     }
 }

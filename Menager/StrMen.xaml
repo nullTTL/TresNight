@@ -20,7 +20,7 @@
             <RowDefinition Height="50"/>
 
         </Grid.RowDefinitions>
-        <Button Grid.Row="3" Grid.Column="3" Height="25" Width="80"  Content="Назад" Name="back"/>
+        <Button Grid.Row="3" Grid.Column="3" Height="25" Width="80"  Content="Назад" Name="back" Click="back_Click"/>
         <Button Grid.Column="1" Grid.Row="1" Width="175" Height="25" Name="Add" FontSize="16" Content="Добавить работника" Margin="0 0 0 90" Click="Add_Click"/>
         <Button Grid.Column="1" Grid.Row="1" Width="175" Height="25" FontSize="16" Content="Просмотр Учета"  Name="Listacc" Click="Listacc_Click"/>
         <Button Grid.Column="1" Grid.Row="1" Width="175" Height="25" Name="SetterW" FontSize="16" Content="Ред/Просмотр раб." Margin="0 0 0 -90" Click="SetterW_Click"/>

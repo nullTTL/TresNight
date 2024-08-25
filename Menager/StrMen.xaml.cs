@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TresNight.Auth;
 using TresNight.Base;
 
 namespace TresNight.Menager
@@ -39,6 +40,11 @@ namespace TresNight.Menager
         private void SetterW_Click(object sender, RoutedEventArgs e)
         {
             Transition.frm0bj.Navigate(new ListWk());
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            Transition.frm0bj.Navigate(new Log());
         }
     }
 }

@@ -64,7 +64,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Admin\AddMen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Listms.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Str.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Auth\Log.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Bars_Cmt\AddAccBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Bars_Cmt\StrMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Kitchen_Cmt\AddAccKitchen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Kitchen_Cmt\StrAddKitchen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -72,12 +100,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Admin\AddMen.xaml.cs">
+      <DependentUpon>AddMen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Listms.xaml.cs">
+      <DependentUpon>Listms.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Str.xaml.cs">
+      <DependentUpon>Str.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Auth\Log.xaml.cs">
       <DependentUpon>Log.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bars_Cmt\AddAccBar.xaml.cs">
+      <DependentUpon>AddAccBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bars_Cmt\StrMain.xaml.cs">
+      <DependentUpon>StrMain.xaml</DependentUpon>
     </Compile>
     <Compile Include="Base\Bar.cs">
       <DependentUpon>Bsm.tt</DependentUpon>
@@ -124,12 +167,46 @@
       <DependentUpon>Bsm.tt</DependentUpon>
     </Compile>
     <Compile Include="Base\USH.cs" />
+    <Compile Include="Kitchen_Cmt\AddAccKitchen.xaml.cs">
+      <DependentUpon>AddAccKitchen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kitchen_Cmt\StrAddKitchen.xaml.cs">
+      <DependentUpon>StrAddKitchen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Menager\AddWorks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menager\ListAcc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menager\ListWk.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menager\StrMen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Menager\AddWorks.xaml.cs">
+      <DependentUpon>AddWorks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menager\ListAcc.xaml.cs">
+      <DependentUpon>ListAcc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menager\ListWk.xaml.cs">
+      <DependentUpon>ListWk.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menager\StrMen.xaml.cs">
+      <DependentUpon>StrMen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -164,9 +241,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\" />
-    <Folder Include="Kitchen\" />
-    <Folder Include="Menager\" />
     <Folder Include="Resource\" />
   </ItemGroup>
   <ItemGroup>

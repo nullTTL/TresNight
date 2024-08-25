@@ -29,11 +29,11 @@ namespace TresNight.Base
     
         public virtual DbSet<Bar> Bar { get; set; }
         public virtual DbSet<Kitchen> Kitchen { get; set; }
-        public virtual DbSet<Post> Post { get; set; }
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<Product_Bar> Product_Bar { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<User> User { get; set; }
+        public virtual DbSet<Post> Post { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

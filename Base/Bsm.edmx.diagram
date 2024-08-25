@@ -7,7 +7,6 @@
       <Diagram DiagramId="9f90dfc1d2414570913d84c0c6567684" Name="Diagram1">
         <EntityTypeShape EntityType="FrsNightModel.Bar" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="FrsNightModel.Kitchen" Width="1.5" PointX="8.25" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="FrsNightModel.Post" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="FrsNightModel.Product" Width="1.5" PointX="6" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="FrsNightModel.Product_Bar" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="FrsNightModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
@@ -16,7 +15,8 @@
         <AssociationConnector Association="FrsNightModel.FK_Bar_User" ManuallyRouted="false" />
         <AssociationConnector Association="FrsNightModel.FK_Kitchen_Product1" ManuallyRouted="false" />
         <AssociationConnector Association="FrsNightModel.FK_Kitchen_User" ManuallyRouted="false" />
-        <AssociationConnector Association="FrsNightModel.FK_User_Post" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="FrsNightModel.Post" Width="1.5" PointX="0.75" PointY="4.75" />
+        <AssociationConnector Association="FrsNightModel.FK_User_Post" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

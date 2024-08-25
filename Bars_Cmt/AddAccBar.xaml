@@ -1,0 +1,44 @@
+﻿<Page x:Class="TresNight.Bars_Cmt.AddAccBar"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TresNight.Bars_Cmt"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddAccBar">
+
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+
+
+
+            <Button Grid.Column="1" Grid.Row="1"  Width="150" Height="30" Margin="0 100 0 20" VerticalAlignment="Bottom"  FontSize="15" Name="AddW" Content="Создать" Click="AddW_Click"   />
+            <Button  Grid.Column="3" Grid.Row="2" Height="25" Width="80" VerticalAlignment="Top" HorizontalAlignment="Center"  Margin="0 0 0 0" Content="Назад" Name="back" Click="back_Click"  />
+
+            <TextBlock Grid.Column="1" Grid.Row="0"  Width="180" Height="40" FontStyle="Italic" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="27" Margin=" 0 0 0 0 "
+     Text="Учет товара" />
+
+            <TextBlock Grid.Column="1" Grid.Row="1"  Width="71" Height="20" FontSize="15" HorizontalAlignment="Left"
+             Margin=" 120 -100 0 0" Text="Товар" />
+            <ComboBox Grid.Column="1" Grid.Row="1"  Width="150" Height="25" HorizontalAlignment="Center" Name="ItemCmd" FontSize="16" Margin="0 -100 0 0" SelectionChanged="ItemCmd_SelectionChanged" />
+
+            <TextBlock Grid.Column="1" Grid.Row="1"  Width="80" Height="20" FontSize="15" HorizontalAlignment="Left"
+             Margin=" 85 0 0 0" Text="Количество:" />
+            <TextBox Grid.Column="1" Grid.Row="1"  Width="150" Height="25" Name="Pci" FontSize="16" Margin="0 0 0 0" PreviewTextInput="Pci_PreviewTextInput" />
+
+
+        </Grid>
+    </Grid>
+</Page>

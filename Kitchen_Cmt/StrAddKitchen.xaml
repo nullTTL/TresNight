@@ -31,33 +31,34 @@
             <TextBlock FontWeight="Bold" FontSize="14" Name="NameUs" Margin="80 20 0 0" />
 
 
-            <DataGrid Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"
-   Name="grdinf"
-   AutoGenerateColumns="False"
-   IsReadOnly="False">
+                      <DataGrid Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"
+             Name="grdinf"
+             AutoGenerateColumns="False"
+             IsReadOnly="False"
+             CanUserAddRows="False">
                 <DataGrid.Columns>
 
 
                     <DataGridTextColumn
-     Width="80"
-     Header="Имя"
-     Binding ="{Binding User.Name}"/>
-                    <DataGridTextColumn
-     Width="50"
-     Header="Зона"
-     Binding ="{Binding Id_zone}"/>
-                    <DataGridTextColumn
-     Width="*"
-     Header="Продукт"
-     Binding ="{Binding Product.Name}"/>
-                    <DataGridTextColumn
-     Width="*"
-     Header="Количество продукта"
-     Binding ="{Binding Pcs}"/>
-                    <DataGridTextColumn
-     Width="*"
-     Header="Дата"
-     Binding ="{Binding Date_recorde}"/>
+                     Width="80"
+                     Header="Имя"
+                     Binding ="{Binding User.Name}"/>
+                                    <DataGridTextColumn
+                     Width="50"
+                     Header="Зона"
+                     Binding ="{Binding Id_zone}"/>
+                                    <DataGridTextColumn
+                     Width="*"
+                     Header="Продукт"
+                     Binding ="{Binding Product.Name}"/>
+                                    <DataGridTextColumn
+                     Width="*"
+                     Header="Количество продукта"
+                     Binding ="{Binding Pcs}"/>
+                                    <DataGridTextColumn
+                     Width="*"
+                     Header="Дата"
+                     Binding ="{Binding Date_recorde}"/>
                 </DataGrid.Columns>
 
             </DataGrid>

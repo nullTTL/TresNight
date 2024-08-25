@@ -13,6 +13,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TresNight.Base;
+using TresNight.Bars_Cmt;
+using TresNight.Kitchen_Cmt;
+using TresNight.Admin;
+using TresNight.Menager;
+
 
 namespace TresNight.Auth
 {
@@ -42,21 +47,36 @@ namespace TresNight.Auth
                 {
                     USH.IdUser = Us0bj.Id;
                     USH.Name = Us0bj.Name;
+                    
 
                     switch (Us0bj.Id_post)
                     {
-                        case 1:
+                        case 4:
 
                             USH.IdUser = Us0bj.Id;
                             USH.Login = lg.Text;
-                            FRS.frm0bj.Navigate(new Startworker());
+                            Transition.frm0bj.Navigate(new StrMain());
+                            break;
+                        case 5:
+
+                            USH.IdUser = Us0bj.Id;
+                            USH.Login = lg.Text;
+                            Transition.frm0bj.Navigate(new StrAddKitchen());
+                            break;
+                        case 6:
+
+                            USH.IdUser = Us0bj.Id;
+                            USH.Login = lg.Text;
+                            Transition.frm0bj.Navigate(new StrMen());
+                            break;
+                        case 7:
+
+                            USH.IdUser = Us0bj.Id;
+                            USH.Login = lg.Text;
+                            Transition.frm0bj.Navigate(new Str());
                             break;
 
-                        case 2:
 
-                            FRS.frm0bj.Navigate(new Startstuff());
-
-                            break;
                     }
                 }
             }
